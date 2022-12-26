@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{%  block body %}
+<div class="container">
+<h1>Отставить комментарий</h1>
+    <form method="post">
+        <input type="text" name="name" class="form-control" placeholder="Введите имя">
+        <textarea name="text" id="text" class="form-control"placeholder="Введите комментарий"></textarea><br>
+        <input type="submit"  class="btn btn-success" value="Отправить">
+    </form>
+    </div>
+<div class="container mt-5">
+<h1>Все коментарии на сайте</h1>
+{% if articles|length > 0 %}
+   {% for el in articles %}
+   <div class="alert alert-dark">
+       <h2>{{ el.name}}</h2>
+       <p>{{ el.text }}</p>
+       <p><b>Дата: {{ el.date.date() }}</b></p>
+   </div>
+
+    {% endfor %}
+{% else %}
+    <p>У нас ещё нет рецептов на сайте</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {%  block head %}{% endblock %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ffmain.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>{%  block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="container">
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+
+        <span class="fs-4">РецептыДляВас</span>
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/home" class="nav-link px-2 link-secondary">Главная</a></li>
+        <li><a href="/about" class="nav-link px-2 link-dark">О нас</a></li>
+        <li><a href="/contacs" class="nav-link px-2 link-dark">Контакты</a></li>
+        <li><a href="/posts" class="nav-link px-2 link-dark">Рецепты</a></li>
+          <li><a href="/reviews" class="nav-link px-2 link-dark">Отзывы</a></li>
+         <li><a href="/create_article" class="btn btn-warning me-2">Создать</a></li>
+      </ul>
+</header>
+</div>
+{%  block body %}{% endblock %}
+<div class="container">
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <small class="d-block mb-3 text-muted">© 2017–2022</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Рецепты</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/posts">Перейти </a></li>
+
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>О нас</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/about">Перейти</a></li>
+
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Главная</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/">Перейти</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </footer>
+    </div>
+</body>
